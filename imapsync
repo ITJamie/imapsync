@@ -6977,7 +6977,7 @@ FIN_PASSFILE
 		return ;
 	}
 	if ( $ENV{IMAPSYNC_PASSWORD1} ) {
-		$mysync->{password1} = $ENV{IMAPSYNC_PASSWORD1} ;
+		$mysync->{password1} = decode_base64($ENV{IMAPSYNC_PASSWORD1}) ;
 		return ;
 	}
 	return ;
@@ -7020,7 +7020,7 @@ FIN_PASSFILE
 		return ;
 	}
 	if ( $ENV{IMAPSYNC_PASSWORD2} ) {
-		$mysync->{password2} = $ENV{IMAPSYNC_PASSWORD2} ;
+		$mysync->{password2} = decode_base64($ENV{IMAPSYNC_PASSWORD2}) ;
 		return ;
 	}
 	return ;
